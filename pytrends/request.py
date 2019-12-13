@@ -78,7 +78,7 @@ class TrendReq(object):
                     timeout=self.timeout,
                     proxies=proxy
                 ).cookies.items()))
-            except requests.exceptions.ProxyError:
+            except:
                 print('Proxy error. Changing IP')
                 if len(self.proxies) > 0:
                     self.proxies.remove(self.proxies[self.proxy_index])
